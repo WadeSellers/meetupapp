@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		169CF97619EC552600BAC8EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 169CF97519EC552600BAC8EC /* main.m */; };
 		169CF97919EC552600BAC8EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 169CF97819EC552600BAC8EC /* AppDelegate.m */; };
-		169CF97C19EC552600BAC8EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 169CF97B19EC552600BAC8EC /* ViewController.m */; };
+		169CF97C19EC552600BAC8EC /* MeetupResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 169CF97B19EC552600BAC8EC /* MeetupResultsViewController.m */; };
 		169CF97F19EC552600BAC8EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 169CF97D19EC552600BAC8EC /* Main.storyboard */; };
 		169CF98119EC552600BAC8EC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 169CF98019EC552600BAC8EC /* Images.xcassets */; };
 		169CF98419EC552600BAC8EC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169CF98219EC552600BAC8EC /* LaunchScreen.xib */; };
 		169CF99019EC552600BAC8EC /* MeetUpAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 169CF98F19EC552600BAC8EC /* MeetUpAppTests.m */; };
+		169CF99B19EC744200BAC8EC /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 169CF99A19EC744200BAC8EC /* DetailsViewController.m */; };
+		169CF9A119ECBBD500BAC8EC /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 169CF9A019ECBBD500BAC8EC /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,18 @@
 		169CF97519EC552600BAC8EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		169CF97719EC552600BAC8EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		169CF97819EC552600BAC8EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		169CF97A19EC552600BAC8EC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		169CF97B19EC552600BAC8EC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		169CF97A19EC552600BAC8EC /* MeetupResultsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetupResultsViewController.h; sourceTree = "<group>"; };
+		169CF97B19EC552600BAC8EC /* MeetupResultsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetupResultsViewController.m; sourceTree = "<group>"; };
 		169CF97E19EC552600BAC8EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		169CF98019EC552600BAC8EC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		169CF98319EC552600BAC8EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		169CF98919EC552600BAC8EC /* MeetUpAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeetUpAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		169CF98E19EC552600BAC8EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		169CF98F19EC552600BAC8EC /* MeetUpAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetUpAppTests.m; sourceTree = "<group>"; };
+		169CF99919EC744200BAC8EC /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		169CF99A19EC744200BAC8EC /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		169CF99F19ECBBD500BAC8EC /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		169CF9A019ECBBD500BAC8EC /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +87,17 @@
 		169CF97219EC552600BAC8EC /* MeetUpApp */ = {
 			isa = PBXGroup;
 			children = (
-				169CF97719EC552600BAC8EC /* AppDelegate.h */,
-				169CF97819EC552600BAC8EC /* AppDelegate.m */,
-				169CF97A19EC552600BAC8EC /* ViewController.h */,
-				169CF97B19EC552600BAC8EC /* ViewController.m */,
 				169CF97D19EC552600BAC8EC /* Main.storyboard */,
+				169CF97A19EC552600BAC8EC /* MeetupResultsViewController.h */,
+				169CF97B19EC552600BAC8EC /* MeetupResultsViewController.m */,
+				169CF99919EC744200BAC8EC /* DetailsViewController.h */,
+				169CF99A19EC744200BAC8EC /* DetailsViewController.m */,
+				169CF99F19ECBBD500BAC8EC /* WebViewController.h */,
+				169CF9A019ECBBD500BAC8EC /* WebViewController.m */,
 				169CF98019EC552600BAC8EC /* Images.xcassets */,
 				169CF98219EC552600BAC8EC /* LaunchScreen.xib */,
+				169CF97719EC552600BAC8EC /* AppDelegate.h */,
+				169CF97819EC552600BAC8EC /* AppDelegate.m */,
 				169CF97319EC552600BAC8EC /* Supporting Files */,
 			);
 			path = MeetUpApp;
@@ -219,9 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				169CF97C19EC552600BAC8EC /* ViewController.m in Sources */,
+				169CF97C19EC552600BAC8EC /* MeetupResultsViewController.m in Sources */,
+				169CF9A119ECBBD500BAC8EC /* WebViewController.m in Sources */,
 				169CF97919EC552600BAC8EC /* AppDelegate.m in Sources */,
 				169CF97619EC552600BAC8EC /* main.m in Sources */,
+				169CF99B19EC744200BAC8EC /* DetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +424,7 @@
 				169CF99519EC552600BAC8EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		169CF99619EC552600BAC8EC /* Build configuration list for PBXNativeTarget "MeetUpAppTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +433,7 @@
 				169CF99819EC552600BAC8EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DetailsViewController.h
 //  MeetUpApp
 //
 //  Created by Wade Sellers on 10/13/14.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface DetailsViewController : UIViewController
+@property NSDictionary *resultsDictionary;
 
 
 @end
-
