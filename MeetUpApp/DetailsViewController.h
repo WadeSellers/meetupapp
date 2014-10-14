@@ -10,6 +10,8 @@
 
 @interface DetailsViewController : UIViewController
 @property NSDictionary *resultsDictionary;
+@property NSDictionary *commentsDictionary;
+
 
 
 @end

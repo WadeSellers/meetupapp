@@ -14,6 +14,9 @@
 @property (weak, nonatomic) IBOutlet UITableView *meetupsDataTableView;
 @property NSArray *arrayFromResultsDictionary;
 @property NSDictionary *meetupResultsDictionary;
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+@property NSString *defaultSearch;
+@property NSString *usersSearch;
 
 @end
 
@@ -22,9 +25,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.defaultSearch = @"https://api.meetup.com/2/open_events.json?zip=60604&text=mobile&time=,1w&key=23667e048391366f57334782b4d4";
     //This magic takes a web address and produces a big JSON file.
 
-    NSURL *url = [NSURL URLWithString:@"https://api.meetup.com/2/open_events.json?zip=60604&text=mobile&time=,1w&key=23667e048391366f57334782b4d4"];
+    NSURL *url = [NSURL URLWithString:self.defaultSearch];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:
      ^(NSURLResponse *response, NSData *data, NSError *connectionError)
@@ -81,6 +85,41 @@
 
 }
 
+- (IBAction)searchGoButton:(id)sender
+{
+    NSString *defaultString = @"https://api.meetup.com/2/open_events.json?zip=60604&text=mobile&time=,1w&key=23667e048391366f57334782b4d4";
+
+    defaultString = [defaultString stringByReplacingOccurrencesOfString:@"mobile"
+                                         withString:self.searchTextField.text];
+    self.usersSearch = defaultString;
+
+    NSURL *url = [NSURL URLWithString:self.usersSearch];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:
+     ^(NSURLResponse *response, NSData *data, NSError *connectionError)
+     {
+         NSLog(@"%@", connectionError);
+         //This stores the big ass json file
+         NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+
+         NSLog(@"%@", jsonString);
+
+         NSError *jsonError = nil;
+
+         //this digs me down deep enough to reach the values I want to display because I have access to their keys.
+         self.meetupResultsDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+         //This digs down and produces us with the dictionary within the results array
+         self.arrayFromResultsDictionary = [self.meetupResultsDictionary objectForKey:@"results"];
+
+         NSLog(@"%@", self.arrayFromResultsDictionary);
+
+         [self.meetupsDataTableView reloadData];
+
+         NSLog(@"Connection error: %@", connectionError);
+         NSLog(@"JSON error: %@", jsonError);
+     }];
+
+}
 
 
 
